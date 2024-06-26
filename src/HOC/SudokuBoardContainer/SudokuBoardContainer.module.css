@@ -1,0 +1,8 @@
+.SudokuBoardContainer {
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  position: relative;
+}

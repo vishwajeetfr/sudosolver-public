@@ -1,0 +1,61 @@
+.CellInput {
+  display: grid;
+  justify-items: stretch;
+  align-items: stretch;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.Value {
+  display: grid;
+  border-radius: 50%;
+  background-color: ghostwhite;
+  justify-items: center;
+  align-items: center;
+  border: 2px solid purple;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  overflow: hidden;
+}
+
+.Value::before {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  transform: translateX(-100%);
+  transition: all 0.2s;
+}
+
+.Value:hover::before {
+  transform: translateX(0);
+}
+
+.Value:active::before {
+  transform: translateX(100%);
+}
+
+.CellInput.ClearCell .Value {
+  border: 2px solid red;
+}
+
+@media only screen and (max-width: 44em) {
+  .CellInput {
+    height: calc(8vmin - 0.27rem);
+  }
+
+  .Value::before {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 28em) {
+  .CellInput {
+    font-size: 0.7rem;
+  }
+}

@@ -1,0 +1,29 @@
+.Sudoku {
+  background-color: purple;
+  width: 70vmin;
+  height: 70vmin;
+  padding: 4px;
+  padding-left: 3px;
+  display: grid;
+  align-items: stretch;
+  overflow: hidden;
+}
+
+@media only screen and (max-width: 44em) {
+  .Sudoku {
+    width: 70vw;
+    height: 70vw;
+  }
+}
+
+.Solved {
+  background-color: greenyellow;
+}
+
+.Content {
+  grid-column: 1 / span 1;
+  grid-row: 1 / span 1;
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: repeat(9, 1fr);
+}

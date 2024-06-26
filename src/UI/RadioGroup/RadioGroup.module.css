@@ -1,0 +1,16 @@
+.RadioGroup {
+  margin: 0.7rem;
+  display: grid;
+  gap: 0.4rem;
+  justify-items: center;
+}
+
+.BtnContainer {
+  display: grid;
+  grid-template-columns: repeat(3, min-content);
+  gap: 0.2rem;
+}
+
+.RadioGroupTitle {
+  font-weight: bold;
+}

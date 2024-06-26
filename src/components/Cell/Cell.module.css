@@ -1,0 +1,69 @@
+.Cell {
+  width: 100%;
+  height: 100%;
+  font-size: 1.2rem;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  cursor: pointer;
+  color: purple;
+  border-left: 1px solid purple;
+  border-bottom: 1px solid purple;
+  position: relative;
+  z-index: 99;
+}
+
+.Default {
+  font-weight: bold;
+  color: purple;
+  font-size: 1.4rem;
+}
+
+.Active {
+  outline: 4px solid green;
+}
+
+@media only screen and (max-width: 44em) {
+  .Cell {
+    font-size: 1rem;
+  }
+
+  .Default {
+    font-size: 1.2rem;
+  }
+}
+
+.Invalid {
+  background-color: rgb(230, 140, 140);
+}
+
+.Cell:focus {
+  background-color: green;
+  color: ghostwhite;
+  outline: none;
+  z-index: 98;
+}
+
+.Cell:focus::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(-100vw);
+  background-color: rgba(41, 167, 41, 0.37);
+  width: 300vw;
+  height: 100%;
+  z-index: 0;
+}
+
+.Cell:focus::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(-100vh);
+  background-color: rgba(41, 167, 41, 0.37);
+  height: 300vh;
+  width: 100%;
+  z-index: 0;
+}

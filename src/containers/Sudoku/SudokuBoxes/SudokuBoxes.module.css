@@ -1,0 +1,17 @@
+.SudokuBoxes {
+  grid-row: 1 / span 1;
+  grid-column: 1 / span 1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  background-color: purple;
+  gap: 3px;
+}
+
+.Solved {
+  background-color: greenyellow;
+}
+
+.GridBox {
+  background-color: ghostwhite;
+}

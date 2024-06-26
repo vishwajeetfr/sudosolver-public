@@ -1,0 +1,38 @@
+.OptionSide {
+  padding: 2rem;
+  background-color: ghostwhite;
+  border: 2px solid purple;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  gap: 1rem;
+  overflow: hidden;
+}
+
+.OptionDetails {
+  transform: translateY(-100%);
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.OptionSide:hover .OptionDetails {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media only screen and (max-width: 54em), only screen and (hover: none) {
+  .Options {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .OptionSide {
+    padding: 1rem;
+  }
+
+  .OptionDetails {
+    opacity: 1;
+    transform: translateY(0);
+    max-width: 25rem;
+    font-size: 0.7rem;
+  }
+}

@@ -1,0 +1,59 @@
+.Button {
+  background-color: ghostwhite;
+  border: 2px solid purple;
+  text-transform: uppercase;
+  border-radius: 0;
+  padding: 0.4rem 0.7rem;
+  font-size: 1.1rem;
+  position: relative;
+  overflow: hidden;
+  transition: 0.1s;
+  cursor: pointer;
+}
+
+.Inline {
+  padding: 0.3rem;
+  border: 1px solid purple;
+  font-size: 0.7rem;
+}
+
+.Button::before {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 50%;
+  transform: translateX(-100%);
+  transition: all 0.2s;
+}
+
+.Button:hover::before {
+  transform: translateX(0);
+}
+
+.Button:active::before {
+  transform: translateX(100%);
+}
+
+.Button:disabled {
+  border-color: rgb(201, 200, 200);
+  cursor: not-allowed;
+}
+
+.Button:disabled:hover::before,
+.Button:disabled:active::before {
+  display: none;
+}
+
+@media only screen and (max-width: 44em) {
+  .Button:hover::before {
+    transform: translateX(-100%);
+  }
+
+  .Button:active {
+    background-color: purple;
+    color: ghostwhite;
+  }
+}

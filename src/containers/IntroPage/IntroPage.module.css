@@ -1,0 +1,103 @@
+.IntroPage {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  justify-items: center;
+  text-align: center;
+  z-index: 99999999;
+  background-color: ghostwhite;
+  gap: 2rem;
+  padding: 2rem;
+  transition: all 0.5s;
+
+  background-size: cover;
+}
+
+.Hidden {
+  opacity: 0;
+  transform: translateX(-100vw);
+}
+
+.Heading {
+  display: grid;
+  gap: 1rem;
+}
+
+/* .HeadingTitle {
+} */
+
+.HeadingTitle span {
+  animation: glowOnHover 3s infinite alternate;
+}
+
+.HeadingInfo {
+  color: grey;
+  font-style: italic;
+}
+
+.Options {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(2, 25rem);
+}
+
+.OptionSide {
+  padding: 2rem;
+  background-color: ghostwhite;
+  border: 2px solid purple;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  gap: 1rem;
+}
+
+.OptionDetails {
+  transform: translateY(-100%);
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.OptionSide:hover .OptionDetails {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media only screen and (max-width: 54em) {
+  .HeadingTitle {
+    font-size: 1.5rem;
+  }
+
+  .HeadingInfo {
+    font-size: 1rem;
+  }
+
+  .Options {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .OptionSide {
+    padding: 1rem;
+  }
+
+  .OptionDetails {
+    opacity: 1;
+    transform: translateY(0);
+    max-width: 25rem;
+    font-size: 0.7rem;
+  }
+}
+
+@keyframes glowOnHover {
+  0% {
+    color: purple;
+  }
+  50% {
+    color: purple;
+  }
+  100% {
+    color: red;
+  }
+}

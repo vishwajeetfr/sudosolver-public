@@ -1,0 +1,47 @@
+{
+  "name": "sudoku-game",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@algorithm.ts/sudoku": "^1.0.22",
+    "@testing-library/jest-dom": "^5.15.0",
+    "@testing-library/react": "^11.2.7",
+    "@testing-library/user-event": "^12.8.3",
+    "array-duplicated": "^2.0.0",
+    "firebase": "^10.12.2",
+    "prop-types": "^15.7.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-redux": "^8.0.0",
+    "react-router-dom": "^6.24.0",
+    "react-scripts": "4.0.3",
+    "redux": "^4.1.2",
+    "redux-thunk": "^2.4.0",
+    "sudoku": "0.0.3",
+    "web-vitals": "^1.1.2"
+  },
+  "scripts": {
+    "start": "export SET NODE_OPTIONS=--openssl-legacy-provider && react-scripts start",
+    "build": "export SET NODE_OPTIONS=--openssl-legacy-provider && react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

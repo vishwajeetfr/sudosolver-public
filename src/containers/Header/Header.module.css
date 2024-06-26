@@ -1,0 +1,43 @@
+.Header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.Row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ModeDetails {
+  z-index: 99;
+  font-style: italic;
+}
+
+@media only screen and (max-width: 44em) {
+  .Row {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+.GlowOnHover {
+  z-index: 99;
+}
+
+.GlowOnHover span {
+  animation: glowOnHover 3s infinite alternate;
+}
+
+@keyframes glowOnHover {
+  0% {
+    color: purple;
+  }
+  50% {
+    color: purple;
+  }
+  100% {
+    color: red;
+  }
+}

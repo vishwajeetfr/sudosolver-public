@@ -1,0 +1,11 @@
+.Controls {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 44em) {
+  .Controls {
+    margin-top: 4rem;
+  }
+}
